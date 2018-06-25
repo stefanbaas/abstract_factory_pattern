@@ -2,7 +2,7 @@
 
 namespace App\Contracts;
 
-interface MedabotFactory
+interface MedabotFactoryContract
 {
     public function setColor(string $color);
     public function addHead();

@@ -4,7 +4,7 @@ namespace App\Factories;
 
 use App\Contracts\MedabotFactoryContract;
 
-class RangedMedabotFactory implements MedabotFactoryContract
+class MeleeMedabotFactory implements MedabotFactoryContract
 {
 
     public function setColor(string $color)
