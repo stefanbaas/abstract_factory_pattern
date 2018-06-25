@@ -14,6 +14,10 @@ class PartDouble {
 
 }
 
+class MedalDouble {
+
+}
+
 class MedabotTest extends TestCase
 {
     private $sut;
@@ -69,5 +73,12 @@ class MedabotTest extends TestCase
         $part = new PartDouble();
         $this->sut->setRightLeg($part);
         $this->assertEquals($part, $this->sut->getRightLeg());
+    }
+
+    public function testSetMedal()
+    {
+        $medal = new MedalDouble();
+        $this->sut->setMedal($medal);
+        $this->assertEquals($medal, $this->sut->getMedal());
     }
 }
