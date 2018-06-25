@@ -2,7 +2,7 @@
 
 namespace App\Classes;
 
-class BuildMeleeMedabot
+class BuildMeleeMedabot extends BuildMedabot
 {
 
 }

@@ -21,4 +21,9 @@ class BuildMeleeMedabotTest extends TestCase
         $this->assertNotNull($this->sut);
     }
 
+    public function testInstanceOf () : void
+    {
+        $this->assertInstanceOf(BuildMedabot::class, $this->sut);
+    }
+
 }
