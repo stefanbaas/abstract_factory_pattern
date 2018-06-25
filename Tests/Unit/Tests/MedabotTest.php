@@ -63,4 +63,11 @@ class MedabotTest extends TestCase
         $this->sut->setLeftLeg($part);
         $this->assertEquals($part, $this->sut->getLeftLeg());
     }
+
+    public function testSetRightLeg()
+    {
+        $part = new PartDouble();
+        $this->sut->setRightLeg($part);
+        $this->assertEquals($part, $this->sut->getRightLeg());
+    }
 }
