@@ -10,6 +10,10 @@ class MedabotDouble extends Medabot
 
 }
 
+class PartDouble {
+
+}
+
 class MedabotTest extends TestCase
 {
     private $sut;
@@ -37,5 +41,12 @@ class MedabotTest extends TestCase
 
         $this->sut->setColour('red');
         $this->assertEquals('red', $this->sut->getColour());
+    }
+
+    public function testSetLeftArm()
+    {
+        $part = new PartDouble();
+        $this->sut->setLeftArm($part);
+        $this->assertEquals($part, $this->sut->getLeftArm());
     }
 }
