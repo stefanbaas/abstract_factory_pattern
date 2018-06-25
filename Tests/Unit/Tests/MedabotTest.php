@@ -17,7 +17,7 @@ class MedabotTest extends TestCase
     protected function setUp() /* The :void return type declaration that should be here would cause a BC issue */
     {
         parent::setUp();
-        $this->sut = new BuildMedabotDouble();
+        $this->sut = new MedabotDouble();
     }
 
     public function testInstantiation () : void
@@ -25,4 +25,8 @@ class MedabotTest extends TestCase
         $this->assertNotNull($this->sut);
     }
 
+    public function testInstanceOf () : void
+    {
+        $this->assertInstanceOf(Medabot::class, $this->sut);
+    }
 }
