@@ -29,4 +29,13 @@ class MedabotTest extends TestCase
     {
         $this->assertInstanceOf(Medabot::class, $this->sut);
     }
+
+    public function testSetColour()
+    {
+        $this->sut->setColour('green');
+        $this->assertEquals('green', $this->sut->getColour());
+
+        $this->sut->setColour('red');
+        $this->assertEquals('red', $this->sut->getColour());
+    }
 }
