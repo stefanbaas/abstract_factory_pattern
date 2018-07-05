@@ -8,6 +8,10 @@ use PHPUnit\Framework\TestCase;
 class BuildMedabotDouble extends BuildMedabot
 {
 
+    public function makeMedabot()
+    {
+        // TODO: Implement makeMedabot() method.
+    }
 }
 
 class BuildMedabotTest extends TestCase
