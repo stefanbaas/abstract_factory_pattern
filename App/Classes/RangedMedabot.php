@@ -2,7 +2,7 @@
 
 namespace App\Classes;
 
-class RangedMedabot
+class RangedMedabot extends Medabot
 {
 
 }

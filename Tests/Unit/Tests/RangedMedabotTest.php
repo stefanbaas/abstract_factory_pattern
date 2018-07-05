@@ -20,4 +20,9 @@ class RangedMedabotTest extends TestCase
     {
         $this->assertNotNull($this->sut);
     }
+
+    public function testInstanceOf () : void
+    {
+        $this->assertInstanceOf(Medabot::class, $this->sut);
+    }
 }
