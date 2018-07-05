@@ -2,7 +2,7 @@
 
 namespace App\Classes;
 
-class MeleeMedabot
+class MeleeMedabot extends Medabot
 {
 
 }
