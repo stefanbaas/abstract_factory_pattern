@@ -25,4 +25,9 @@ class DragonMedalTest extends TestCase
     {
         $this->assertInstanceOf(MedabotMedal::class, $this->sut);
     }
+
+    public function testToString () : void
+    {
+        $this->assertTrue(is_string($this->sut->toString()));
+    }
 }
