@@ -3,6 +3,7 @@
 namespace App\Factories;
 
 use App\Classes\Medabot;
+use App\Classes\Medals\BeetleMedal;
 use App\Classes\MeleeMedabot;
 use App\Classes\Parts\MeleeMedabotArm;
 use App\Classes\Parts\MeleeMedabotHead;
@@ -20,6 +21,7 @@ class MeleeMedabotFactory implements MedabotFactoryContract
         $medabot->setRightArm(new MeleeMedabotArm());
         $medabot->setLeftLeg(new MeleeMedabotLeg());
         $medabot->setRightLeg(new MeleeMedabotLeg());
+        $medabot->setMedal(new BeetleMedal());
 
         return $medabot;
     }

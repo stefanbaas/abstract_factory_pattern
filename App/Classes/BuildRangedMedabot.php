@@ -9,6 +9,7 @@ class BuildRangedMedabot extends BuildMedabot
 
     public function makeMedabot()
     {
-        return new RangedMedabotFactory();
+        $factory = new RangedMedabotFactory();
+        return $factory->build();
     }
 }

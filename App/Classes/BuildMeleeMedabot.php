@@ -9,6 +9,7 @@ class BuildMeleeMedabot extends BuildMedabot
 
     public function makeMedabot()
     {
-        return new MeleeMedabotFactory();
+        $factory = new MeleeMedabotFactory();
+        return $factory->build();
     }
 }

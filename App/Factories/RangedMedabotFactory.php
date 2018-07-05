@@ -3,6 +3,7 @@
 namespace App\Factories;
 
 use App\Classes\Medabot;
+use App\Classes\Medals\DragonMedal;
 use App\Classes\Parts\RangedMedabotArm;
 use App\Classes\Parts\RangedMedabotHead;
 use App\Classes\Parts\RangedMedabotLeg;
@@ -20,6 +21,7 @@ class RangedMedabotFactory implements MedabotFactoryContract
         $medabot->setRightArm(new RangedMedabotArm());
         $medabot->setLeftLeg(new RangedMedabotLeg());
         $medabot->setRightLeg(new RangedMedabotLeg());
+        $medabot->setMedal(new DragonMedal());
 
         return $medabot;
     }
