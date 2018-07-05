@@ -4,6 +4,7 @@ namespace Tests;
 
 use App\Classes\BuildMedabot;
 use App\Classes\BuildRangedMedabot;
+use App\Factories\RangedMedabotFactory;
 use PHPUnit\Framework\TestCase;
 
 class BuildRangedMedabotTest extends TestCase
@@ -24,5 +25,10 @@ class BuildRangedMedabotTest extends TestCase
     public function testInstanceOf () : void
     {
         $this->assertInstanceOf(BuildMedabot::class, $this->sut);
+    }
+
+    public function testMakeMedabot () : void
+    {
+        $this->assertInstanceOf(RangedMedabotFactory::class, $this->sut->makeMedabot());
     }
 }

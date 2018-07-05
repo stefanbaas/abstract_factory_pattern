@@ -2,11 +2,13 @@
 
 namespace App\Classes;
 
+use App\Factories\RangedMedabotFactory;
+
 class BuildRangedMedabot extends BuildMedabot
 {
 
     public function makeMedabot()
     {
-        // TODO: Implement makeMedabot() method.
+        return new RangedMedabotFactory();
     }
 }
