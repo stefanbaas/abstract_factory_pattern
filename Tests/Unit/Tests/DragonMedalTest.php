@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use App\Classes\MedabotMedal;
 use App\Classes\Medals\DragonMedal;
 use PHPUnit\Framework\TestCase;
 
@@ -18,5 +19,10 @@ class DragonMedalTest extends TestCase
     public function testInstantiation () : void
     {
         $this->assertNotNull($this->sut);
+    }
+
+    public function testInstanceOf () : void
+    {
+        $this->assertInstanceOf(MedabotMedal::class, $this->sut);
     }
 }

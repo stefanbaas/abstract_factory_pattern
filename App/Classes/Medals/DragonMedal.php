@@ -2,7 +2,12 @@
 
 namespace App\Classes\Medals;
 
-class DragonMedal
-{
+use App\Classes\MedabotMedal;
 
+class DragonMedal extends MedabotMedal
+{
+    public function toString(): string
+    {
+        return "Dragon medal";
+    }
 }
