@@ -2,7 +2,12 @@
 
 namespace App\Classes;
 
-abstract class MedabotMedal
-{
+use App\Contracts\MedalContract;
 
+abstract class MedabotMedal implements MedalContract
+{
+    public function toString(): string
+    {
+        return "";
+    }
 }

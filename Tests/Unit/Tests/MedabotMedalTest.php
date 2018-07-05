@@ -24,4 +24,14 @@ class MedabotMedalTest extends TestCase
     {
         $this->assertNotNull($this->sut);
     }
+
+    public function testInstanceOf () : void
+    {
+        $this->assertInstanceOf(MedabotMedal::class, $this->sut);
+    }
+
+    public function testToString () : void
+    {
+        $this->assertTrue(is_string($this->sut->toString()));
+    }
 }
