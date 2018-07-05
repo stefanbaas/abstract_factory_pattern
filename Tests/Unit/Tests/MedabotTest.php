@@ -3,6 +3,8 @@
 namespace Tests;
 
 use App\Classes\Medabot;
+use App\Classes\MedabotMedal;
+use App\Classes\MedabotPart;
 use PHPUnit\Framework\TestCase;
 
 class MedabotDouble extends Medabot
@@ -10,11 +12,11 @@ class MedabotDouble extends Medabot
 
 }
 
-class PartDouble {
+class PartDouble extends MedabotPart {
 
 }
 
-class MedalDouble {
+class MedalDouble extends MedabotMedal {
 
 }
 
@@ -45,6 +47,13 @@ class MedabotTest extends TestCase
 
         $this->sut->setColour('red');
         $this->assertEquals('red', $this->sut->getColour());
+    }
+
+    public function testSetHead()
+    {
+        $part = new PartDouble();
+        $this->sut->setHead($part);
+        $this->assertEquals($part, $this->sut->getHead());
     }
 
     public function testSetLeftArm()

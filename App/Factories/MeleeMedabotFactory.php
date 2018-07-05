@@ -4,6 +4,9 @@ namespace App\Factories;
 
 use App\Classes\Medabot;
 use App\Classes\MeleeMedabot;
+use App\Classes\Parts\MeleeMedabotArm;
+use App\Classes\Parts\MeleeMedabotHead;
+use App\Classes\Parts\MeleeMedabotLeg;
 use App\Contracts\MedabotFactoryContract;
 
 class MeleeMedabotFactory implements MedabotFactoryContract
@@ -12,6 +15,12 @@ class MeleeMedabotFactory implements MedabotFactoryContract
     {
         $medabot = new MeleeMedabot();
         $medabot->setColour('green');
+        $medabot->setHead(new MeleeMedabotHead());
+        $medabot->setLeftArm(new MeleeMedabotArm());
+        $medabot->setRightArm(new MeleeMedabotArm());
+        $medabot->setLeftLeg(new MeleeMedabotLeg());
+        $medabot->setRightLeg(new MeleeMedabotLeg());
+
         return $medabot;
     }
 }
