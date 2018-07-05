@@ -8,6 +8,6 @@ abstract class MedabotPart implements PartContract
 {
      public function toString(): string
      {
-         // TODO: Implement toString() method.
+         return "";
      }
  }
