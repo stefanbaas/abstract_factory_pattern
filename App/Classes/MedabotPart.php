@@ -2,7 +2,12 @@
 
 namespace App\Classes;
 
-abstract class MedabotPart
-{
+use App\Contracts\PartContract;
 
-}
+abstract class MedabotPart implements PartContract
+{
+     public function toString(): string
+     {
+         // TODO: Implement toString() method.
+     }
+ }

@@ -25,12 +25,12 @@ class MedabotPartTest extends TestCase
         $this->assertNotNull($this->sut);
     }
 
-    /*public function testInstanceOf () : void
+    public function testInstanceOf () : void
     {
         $this->assertInstanceOf(MedabotPart::class, $this->sut);
     }
 
-    public function testToString () : void
+    /*public function testToString () : void
     {
         $this->assertTrue(is_string($this->sut->toString()));
     }*/
