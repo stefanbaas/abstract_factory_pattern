@@ -2,11 +2,9 @@
 
 namespace App\Contracts;
 
+use App\Classes\Medabot;
+
 interface MedabotFactoryContract
 {
-    public function setColor(string $color);
-    public function addHead();
-    public function addArm();
-    public function addLeg();
-    public function addMedal();
+    public function build() :Medabot;
 }

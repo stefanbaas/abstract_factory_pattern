@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use App\Classes\Medabot;
 use App\Factories\MeleeMedabotFactory;
 use PHPUnit\Framework\TestCase;
 
@@ -18,5 +19,10 @@ class MeleeMedabotFactoryTest extends TestCase
     public function testInstantiation () : void
     {
         $this->assertNotNull($this->sut);
+    }
+
+    public function testBuild () : void
+    {
+        $this->assertInstanceOf(Medabot::class, $this->sut->build());
     }
 }

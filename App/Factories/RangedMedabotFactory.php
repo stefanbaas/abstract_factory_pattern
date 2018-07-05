@@ -2,33 +2,16 @@
 
 namespace App\Factories;
 
+use App\Classes\Medabot;
+use App\Classes\RangedMedabot;
 use App\Contracts\MedabotFactoryContract;
 
 class RangedMedabotFactory implements MedabotFactoryContract
 {
-
-    public function setColor(string $color)
+    public function build() :Medabot
     {
-        // TODO: Implement setColor() method.
-    }
-
-    public function addHead()
-    {
-        // TODO: Implement addHead() method.
-    }
-
-    public function addArm()
-    {
-        // TODO: Implement addArm() method.
-    }
-
-    public function addLeg()
-    {
-        // TODO: Implement addLeg() method.
-    }
-
-    public function addMedal()
-    {
-        // TODO: Implement addMedal() method.
+        $medabot = new RangedMedabot();
+        $medabot->setColour('red');
+        return $medabot;
     }
 }
