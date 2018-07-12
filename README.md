@@ -1,33 +1,14 @@
-### Bareboned PHP 7 with Composer set-up
-Want to quickly test a new feature, practise a new design pattern or just create a new project for yourself?
-Well this probably means you'll have to set-up your project with the most basic packages available: PHPUnit & Composer.
+####Welk design pattern is gekozen?
+Abstract Factory Pattern
 
-And don't forget that you'll have to set-up _yet another_ docker config.. It's the same thing over and over again.
+####Wat zijn de kenmerken (toegevoegde waarde) van dit design pattern?
+De ‘Abstract Factory Pattern’ werkt door middel van een super-factory, die andere factories aanmaakt. Hierdoor heb je meer vrijheid dan de ‘Factory Pattern’.
 
-This repository tries to get you started with just 2 commands - just run:
+####Welke concept is bedacht om het pattern te kunnen toepassen?
+We hebben als concept een Medabot generator bedacht. In ons concept hebben we twee typen Medabots, een Melee Medabot en een Ranged Medabot. Iedere Medabot heeft zijn eigen factory die gebruik maken van een contract/interface, dit is de super-factory. Daarnaast heeft iedere Medabot zijn eigen onderdelen die je via de factory inlaat.
 
-- `git pull git@github.com:KakaCarrotCake/barebone-php-composer.git`
-- `composer install`
+####Wat zijn de responsibilities van de geïmplementeerde classes?
+Dat iedere factory zijn eigen classes kan inladen. Iedere Medabot heeft zijn eigen onderdelen. 
 
-And BAM, A new - bareboned - PHP instance is ready for you to be played with!
-
-You can also run a docker environment in an instant by running the following command in the `/docker` directory:
-
-- `docker-compose up`
-
-### Additional instructions
-Be sure to set the right permissions on the `storage/cache` directory. Your webuser needs to be able to write files into it for Blade template caching.
-
-### Included in this repository are the following packages/software:
-- PHPUnit
-- Composer
-- Docker
-- Blade Template Engine (https://github.com/jenssegers/blade)
-
-#### Docker includes:
-- PHP 7
-- MySQL
-- Nginx
-
-### Suggestions?
-Got any suggestions that would be a good fit for the project? Just post a ticket in the issues section :-).
+####In welk opzicht wordt polymorfie bereikt?
+De ‘MedabotFactory’ wordt onderverdeeld in ’RangedMedabotFactory’ en ‘MeleeMedabotFactory’. De Factories hebben allebei een ‘make’ method, maar er worden andere onderdelen ingeladen. Dus ze geven allebei andere waardes terug.
